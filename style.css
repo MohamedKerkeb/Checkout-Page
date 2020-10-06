@@ -7,7 +7,9 @@ body {
 
 .container {
   /* border: 1px solid red; */
-  width: 375px;
+  width: 95%;
+  max-width: 970px;
+  margin: auto;
 }
 
 /* header */
@@ -136,7 +138,7 @@ label {
 }
 .input {
   border: 1px solid #828282;
-  padding-left: 10px;
+  padding-left: 5px;
   border-radius: 12px;
   display: flex;
   justify-content: flex-start;
@@ -145,18 +147,12 @@ label {
 input {
   border: none;
   height: 40px;
-  padding-left: 5px;
+  padding-left: 3px;
   width: 90%;
 }
 input::placeholder {
   color: #828282;
   font-size: 12px;
-}
-
-.state {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
 }
 
 select {
@@ -169,18 +165,20 @@ select {
 }
 
 .select_input {
-  padding: 0.6em 1.4em 0.5em 0.8em;
+  margin: 0.2em 1.1em 0.2em 0.8em;
+  height: 50%;
   border: none;
-  -moz-appearance: none;
+  /* -moz-appearance: none;
   -webkit-appearance: none;
-  appearance: none;
+  appearance: none; */
   position: relative;
   /* background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
   background-repeat: no-repeat;
   background-position: right 0.7em top 50%;
   background-size: 0.65em auto; */
 }
-.select_input::after {
+
+/* .select_input::after {
   content: "\f107";
   font-family: FontAwesome;
   position: absolute;
@@ -190,16 +188,31 @@ select {
 
 .select_input::-ms-expand {
   display: none;
+} */
+
+.state {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.select_container {
+  height: 40px;
+  margin-right: 10px;
 }
 
 .select,
 .postal {
   width: 50%;
-  margin-right: 10px;
 }
 .select_input,
 .postal_input {
-  width: 88%;
+  width: 80%;
+}
+
+.select_input {
+  padding: 0;
+  margin: 0;
 }
 
 .checkbox {
@@ -230,7 +243,7 @@ select {
 }
 
 .btn_submit > button {
-  padding: 18px;
+  padding: 14px 45px;
   font-size: 16pt;
   color: #fff;
   background: #f2994a;
@@ -267,6 +280,25 @@ footer {
     grid-row: 1;
   }
 
+  legend {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  label {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  input::placeholder {
+    font-size: 16px;
+    line-height: 38px;
+  }
+
+  select {
+    font-size: 16px;
+  }
+
   .content__form {
     grid-column: 1 / span 2;
     grid-row: 2;
@@ -276,6 +308,11 @@ footer {
     grid-column: 3;
     grid-row: 2;
     height: 400px;
+  }
+
+  .select_input,
+  .postal_input {
+    width: 90%;
   }
 
   footer {
